@@ -1,0 +1,100 @@
+{
+  "bookings": {
+    "TRV12345": {
+      "code": "TRV12345",
+      "hotel": "Vinpearl Resort Nha Trang",
+      "room": "Deluxe Ocean View · 2 đêm",
+      "checkIn": "2026-07-10",
+      "amount": 4200000,
+      "currency": "VND",
+      "policyType": "free_cancellation",
+      "freeUntil": "2026-07-08"
+    },
+    "TRV55555": {
+      "code": "TRV55555",
+      "hotel": "Hotel de la Coupole MGallery Sa Pa",
+      "room": "Superior King · 1 đêm",
+      "checkIn": "2026-06-20",
+      "amount": 3100000,
+      "currency": "VND",
+      "policyType": "refundable",
+      "hotelCancelFeePercent": 15
+    },
+    "TRV67890": {
+      "code": "TRV67890",
+      "hotel": "Fusion Suites Vung Tau",
+      "room": "Promo Non-refundable · 3 đêm",
+      "checkIn": "2026-06-25",
+      "amount": 5600000,
+      "currency": "VND",
+      "policyType": "non_refundable"
+    },
+    "TRV24680": {
+      "code": "TRV24680",
+      "hotel": "Meliá Vinpearl Riverfront Đà Nẵng",
+      "room": "Premium · 1 đêm",
+      "checkIn": "2026-06-18",
+      "amount": 2500000,
+      "currency": "VND",
+      "policyType": "refundable",
+      "hotelCancelFeePercent": 10
+    }
+  },
+  "refund_requests": [
+    {
+      "id": "REQ-1003",
+      "bookingCode": "TRV97531",
+      "hotel": "Mường Thanh Luxury Nha Trang",
+      "room": "Deluxe · 2 đêm",
+      "amount": 3800000,
+      "currency": "VND",
+      "reasonLabel": "Đổi lịch / kẹt công việc",
+      "type": "non_refundable",
+      "status": "rejected",
+      "feeAmount": null,
+      "refundAmount": 0,
+      "timelineText": null,
+      "policySource": "Đặt phòng không hoàn tiền: Bạn vẫn có thể gửi yêu cầu; Traveloka chuyển tới đơn vị lưu trú để xét (tối đa 2 ngày).",
+      "createdAt": "2026-06-02",
+      "decidedAt": "2026-06-03",
+      "rejectReason": "Đơn vị lưu trú không chấp nhận hủy sát ngày nhận phòng."
+    },
+    {
+      "id": "REQ-1002",
+      "bookingCode": "TRV13579",
+      "hotel": "InterContinental Phú Quốc",
+      "room": "Classic · 3 đêm",
+      "amount": 9200000,
+      "currency": "VND",
+      "reasonLabel": "Lý do khác: visa bị từ chối",
+      "type": "force_majeure",
+      "status": "approved",
+      "feeAmount": 470000,
+      "refundAmount": 8730000,
+      "timelineText": "tối đa 5 ngày sau khi được phê duyệt",
+      "policySource": "Đặt phòng không hoàn tiền: Bạn vẫn có thể gửi yêu cầu; Traveloka chuyển tới đơn vị lưu trú để xét (tối đa 2 ngày).",
+      "createdAt": "2026-06-01",
+      "decidedAt": "2026-06-02",
+      "rejectReason": null
+    },
+    {
+      "id": "REQ-1001",
+      "bookingCode": "TRV24680",
+      "hotel": "Meliá Vinpearl Riverfront Đà Nẵng",
+      "room": "Premium · 1 đêm",
+      "amount": 2500000,
+      "currency": "VND",
+      "reasonLabel": "Lý do sức khỏe",
+      "type": "fee",
+      "status": "pending",
+      "feeAmount": 570000,
+      "refundAmount": 1930000,
+      "timelineText": "tối đa 5 ngày sau khi được phê duyệt",
+      "policySource": "Chính sách hoàn tiền (đặt phòng có thể hoàn): Khoản hoàn = số tiền sau khi trừ phí hủy của khách sạn + phí xử lý 10% (tối thiểu 32.000đ, tối đa 470.000đ) + phí chuyển khoản (nếu có).",
+      "createdAt": "2026-06-04",
+      "decidedAt": null,
+      "rejectReason": null
+    }
+  ],
+  "seq": 1004
+}

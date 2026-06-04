@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phòng đã đặt · Traveloka</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">traveloka</div>
+    <div class="topbar-right">
+      <a class="nav-link" href="admin.html">Trang hỗ trợ (Support) →</a>
+      <div class="cp-flag">Prototype · CP2</div>
+    </div>
+  </header>
+  <nav class="subnav">
+    <a href="index.html" class="active">Phòng đã đặt</a>
+    <a href="cancel.html">Hủy / Đổi</a>
+    <a href="requests.html">Yêu cầu của tôi</a>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Phòng đã đặt</h1>
+      <p class="sub">Chọn một đặt phòng để hủy/đổi, hoặc dùng 💬 trợ lý AI ở góc dưới phải.</p>
+    </section>
+    <div id="bookings"></div>
+    <footer class="foot">4Tuner · Track B Travel &amp; Hospitality · luồng hỗ trợ hủy/đổi đặt phòng</footer>
+  </main>
+
+  <button id="chat-fab" class="chat-fab" aria-label="Mở Trợ lý AI"><span class="fab-icon">💬</span></button>
+  <div id="chat-panel" class="chat-panel" hidden>
+    <div class="chat-head">
+      <div><b>Trợ lý hỗ trợ AI</b><div class="chat-sub">Hủy/hoàn đặt phòng</div></div>
+      <div class="chat-head-btns">
+        <button id="chat-reset" class="chat-icon" title="Cuộc trò chuyện mới" aria-label="Cuộc trò chuyện mới">↺</button>
+        <button id="chat-close" class="chat-close" aria-label="Đóng">×</button>
+      </div>
+    </div>
+    <div id="chat-log" class="chat-log"></div>
+    <form id="chat-form" class="chat-form">
+      <input id="chat-input" type="text" placeholder="VD: Hủy TRV12345 vì đổi lịch" autocomplete="off" />
+      <button class="btn primary" type="submit">Gửi</button>
+    </form>
+  </div>
+
+  <script src="src/api-client.js"></script>
+  <script src="src/chat.js"></script>
+  <script src="src/bookings.js"></script>
+</body>
+</html>

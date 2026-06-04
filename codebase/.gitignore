@@ -1,0 +1,11 @@
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Node (nếu CP2 thêm backend)
+node_modules/
+.env
+.env.local

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Console · Duyệt yêu cầu hoàn/hủy (Prototype CP1)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar admin">
+    <div class="brand">traveloka · Support</div>
+    <div class="topbar-right">
+      <a class="nav-link" href="index.html">← Trang khách hàng</a>
+      <button id="reset-demo" class="btn ghost sm">Reset dữ liệu demo</button>
+    </div>
+  </header>
+
+  <main class="wrap wide">
+    <section class="hero">
+      <h1>Hàng đợi yêu cầu hoàn/hủy</h1>
+      <p class="sub">Bộ phận hỗ trợ / đơn vị lưu trú duyệt hoặc từ chối. Quyết định cập nhật ngay sang trang khách hàng.</p>
+    </section>
+
+    <div class="admin-stats" id="stats"></div>
+    <div id="queue"></div>
+  </main>
+
+  <script src="src/api-client.js"></script>
+  <script src="src/admin.js"></script>
+</body>
+</html>

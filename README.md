@@ -1,103 +1,42 @@
-# Batch 02 · Day 06 — AI Product Hackathon
+# Day06 — 4Tuner · AI hỗ trợ Hủy đặt phòng & Hoàn tiền (Traveloka)
 
-> SPEC → Prototype → Demo. Hôm nay không có bài giảng mới — hôm nay chứng minh: SPEC là giả thuyết, prototype là bằng chứng, demo là thuyết phục.
+**Track:** Travel & Hospitality · **App soi:** Traveloka
 
----
+Trợ lý AI giúp khách **hủy / đổi / hoàn tiền** đặt phòng khách sạn một cách **minh bạch và có lối thoát** —
+cải thiện đúng chỗ Traveloka đang làm chưa tốt (chatbot chạy vòng quanh, hoàn tiền mờ ám, ép chọn lý do sai).
 
-## Cách nộp bài
+AI **tra chính sách thật** theo mã đặt phòng + lý do → trả "thẻ quyết định" (đủ điều kiện · phí · thời gian hoàn) →
+**conditional automation** theo 4 nhánh: **HAPPY · CÓ PHÍ · CHUYỂN NGƯỜI · HỎI LẠI**, con người giữ quyền duyệt cuối.
 
-**Đại diện nhóm tạo MỘT repo nhóm**, đặt tên:
+## Thành viên
+
+> ⚠️ **CẦN ĐIỀN mã học viên + họ tên đầy đủ** trước khi nộp.
+
+| Thành viên | Mã HV | Vai trò |
+|-----------|-------|---------|
+| Hưng | _[điền]_ | Research / evidence · demo |
+| Việt Anh | _[điền]_ | SPEC · grounding chính sách |
+| Toàn | _[điền]_ | Prototype web · backend |
+| Lân | _[điền]_ | AI agent + tools · test |
+
+## Cấu trúc repo
 
 ```
-Day06-Lop-NhomXX
+├── README.md        ← file này (thành viên + mô tả sản phẩm)
+├── spec/
+│   ├── spec.md          ← SPEC sản phẩm (8 mục)
+│   └── demo-slides.pdf   ← slide thuyết trình
+└── codebase/        ← toàn bộ code prototype (xem codebase/README.md để chạy)
 ```
 
-Ví dụ: `Day06-C401-Nhom03`
+## Chạy nhanh
 
-- **README của repo nhóm phải liệt kê đủ thành viên** — mỗi người gồm **mã học viên + họ và tên**.
-- Đại diện nhóm nộp **link repo** lên LMS. **Hạn nộp: 23:59 ngày 04/06/2026.**
-- Mỗi thành viên cần **ít nhất một commit thực chất** trong repo (không commit = mất điểm cá nhân).
-
-### Cấu trúc repo nhóm
-
-```
-Day06-Lop-NhomXX/
-├── README.md        ← Danh sách thành viên (mã HV + họ tên) + mô tả ngắn sản phẩm
-├── spec/            ← SPEC sản phẩm (xem hướng dẫn trong spec/)
-└── codebase/        ← Toàn bộ code prototype (xem hướng dẫn trong codebase/)
+```bash
+cd codebase/server
+pip install -r requirements.txt
+cp .env.example .env        # điền CUSTOM_BASE_URL / CUSTOM_API_KEY / CUSTOM_MODEL
+uvicorn api:app --reload --port 8000
 ```
 
----
-
-## Lịch ngày 06 — 04/06/2026
-
-| Giờ | Mốc | Cần đạt |
-|-----|-----|---------|
-| Sáng | Build | Bắt đầu từ SPEC nhẹ đã làm ở Day 5 |
-| **11:00** | Checkpoint 1 | **Show được ít nhất mockup/prototype chạy được** |
-| **13:00** | Checkpoint 2 | **Lắp được AI vào ít nhất 1 flow** |
-| **15:30** | Checkpoint 3 | **Chuẩn bị xong tài liệu demo + slide** |
-| **16:00** | Demo round | Trình bày trong zone, 10 phút/nhóm |
-
----
-
-## Tracks
-
-Mỗi nhóm chọn một lĩnh vực, lấy một app thật trong đó để soi và cải tiến:
-
-| Track | App thật gợi ý |
-|-------|----------------|
-| **Learning OS** (Vin AI Thực Chiến) | LMS khóa học, Discord lớp |
-| **Travel & Hospitality** | Vinpearl, Sun World / SunGroup |
-| **Food & Local Delivery** | ShopeeFood, GrabFood, BeFood, Xanh SM Ngon |
-| **Personal Finance** | MoMo, ZaloPay, app ngân hàng |
-| **Healthcare** | Vinmec, Long Châu, Pharmacity |
-
-> Các nhóm **cùng track** ngồi **cùng một zone** khi demo.
-
----
-
-## Kỳ vọng mỗi demo
-
-1. **Product Canvas** — giới thiệu ý tưởng và nỗi đau (painpoint) của người dùng.
-2. **Demo full luồng end-to-end** — show cả happy case lẫn error case.
-3. **AI chạy thật trong ít nhất 1 flow** — không chỉ mockup tĩnh.
-
----
-
-## Demo round (16:00)
-
-- Mỗi nhóm **10 phút** (≈ 5 phút trình bày + 5 phút Q&A).
-- Các nhóm khác **phản biện, đặt câu hỏi**.
-- **Đánh giá chéo qua form**: thành viên các nhóm khác chấm điểm.
-- **Tổng kết**: nhóm điểm cao nhất mỗi zone được **bonus**; còn thời gian thì các nhóm điểm cao **present trước cả lớp**; giảng viên đánh giá.
-
-Chi tiết luật chơi + cách chấm: [`hackathon-rules.md`](hackathon-rules.md)
-
----
-
-## Chấm điểm (Day 5 + Day 6 = 100 điểm)
-
-| Hạng mục | Điểm |
-|----------|------|
-| SPEC | 25 |
-| Prototype | 15 |
-| Demo Day | 25 |
-| Bài tập UX (Day 5) | 10 |
-| Phản ánh cá nhân (reflection) | 25 |
-
-**Điều kiện chặn:** prototype không có lời gọi AI thật → giới hạn 4/10 · không có commit → mất điểm cá nhân · không giải thích được phần mình khi bị hỏi → 0 điểm demo cá nhân.
-
----
-
-## Tài liệu trong repo này
-
-| Folder / file | Nội dung |
-|---------------|----------|
-| [`hackathon-rules.md`](hackathon-rules.md) | Luật chơi, lịch, demo round, cách chấm |
-| [`spec/`](spec/) | Hướng dẫn viết SPEC sản phẩm (nối tiếp SPEC nhẹ Day 5) |
-| [`codebase/`](codebase/) | Yêu cầu nộp code prototype |
-
----
-
-*Batch 02 · Ngày 06 — VinUni A20 · AI Thực Chiến · 2026*
+Mở **http://localhost:8000/** (khách hàng, có chatbot AI 💬) · **/admin.html** (support).
+Chi tiết kiến trúc, công cụ/API, demo: xem [`codebase/README.md`](codebase/README.md). SPEC: [`spec/spec.md`](spec/spec.md).

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hủy / Đổi phòng · Traveloka</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">traveloka</div>
+    <div class="topbar-right">
+      <a class="nav-link" href="admin.html">Trang hỗ trợ (Support) →</a>
+      <div class="cp-flag">Prototype · CP2</div>
+    </div>
+  </header>
+  <nav class="subnav">
+    <a href="index.html">Phòng đã đặt</a>
+    <a href="cancel.html" class="active">Hủy / Đổi</a>
+    <a href="requests.html">Yêu cầu của tôi</a>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Hỗ trợ hủy / đổi đặt phòng</h1>
+      <p class="sub">Nhập mã đặt phòng và lý do — hệ thống nói rõ <b>điều kiện · phí · thời gian hoàn tiền</b> trước khi bạn quyết định.</p>
+    </section>
+
+    <form id="cancel-form" class="card form">
+      <label class="field"><span>Mã đặt phòng</span>
+        <input id="booking-code" type="text" placeholder="VD: TRV12345" autocomplete="off" /></label>
+      <div class="samples">Mã mẫu để thử:
+        <button type="button" class="chip" data-fill="TRV12345">TRV12345 · miễn phí</button>
+        <button type="button" class="chip" data-fill="TRV55555">TRV55555 · có phí</button>
+        <button type="button" class="chip" data-fill="TRV67890">TRV67890 · không hoàn</button>
+        <button type="button" class="chip" data-fill="TRV00000">TRV00000 · mã sai</button>
+      </div>
+      <label class="field"><span>Lý do hủy/đổi</span><select id="reason"></select></label>
+      <label class="field" id="reason-text-wrap" style="display:none"><span>Mô tả lý do (vd: visa bị từ chối)</span>
+        <input id="reason-text" type="text" placeholder="Nhập lý do của bạn..." autocomplete="off" /></label>
+      <div id="form-error" class="form-error" hidden></div>
+      <button class="btn primary block" type="submit">Kiểm tra điều kiện</button>
+    </form>
+
+    <div id="result" aria-live="polite"></div>
+    <footer class="foot">4Tuner · Track B Travel &amp; Hospitality</footer>
+  </main>
+
+  <button id="chat-fab" class="chat-fab" aria-label="Mở Trợ lý AI"><span class="fab-icon">💬</span></button>
+  <div id="chat-panel" class="chat-panel" hidden>
+    <div class="chat-head">
+      <div><b>Trợ lý hỗ trợ AI</b><div class="chat-sub">Hủy/hoàn đặt phòng</div></div>
+      <div class="chat-head-btns">
+        <button id="chat-reset" class="chat-icon" title="Cuộc trò chuyện mới" aria-label="Cuộc trò chuyện mới">↺</button>
+        <button id="chat-close" class="chat-close" aria-label="Đóng">×</button>
+      </div>
+    </div>
+    <div id="chat-log" class="chat-log"></div>
+    <form id="chat-form" class="chat-form">
+      <input id="chat-input" type="text" placeholder="VD: Hủy TRV12345 vì đổi lịch" autocomplete="off" />
+      <button class="btn primary" type="submit">Gửi</button>
+    </form>
+  </div>
+
+  <script src="src/api-client.js"></script>
+  <script src="src/chat.js"></script>
+  <script src="src/cancel.js"></script>
+</body>
+</html>
